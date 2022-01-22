@@ -4,7 +4,9 @@ const commahandler = (list) => {
   }
   return list
     .reduce((result, current) => {
-      if (current.includes(',')) {
+      if (current.includes('"')) {
+        result.push(...current.split('"'))
+      } else if (current.includes(',')) {
         result.push(...current.split(','))
       } else {
         result.push(current)
@@ -12,6 +14,7 @@ const commahandler = (list) => {
 
       return result
     }, [])
+    .filter((el) => el !== '')
     .map((el) => el.trim())
 }
 

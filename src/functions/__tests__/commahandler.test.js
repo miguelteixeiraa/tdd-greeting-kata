@@ -7,3 +7,7 @@ test("commahandler(['Bob', 'Charlie, Dianne']) produces ['Bob', 'Charlie', 'Dian
 test("commahandler(null) produces null", () => {
     expect(commahandler(null)).toBe(null)
 })
+
+test("commahandler(['Bob', '\"Charlie, Dianne\"']) produces ['Bob', 'Charlie, Dianne']", () => {
+    expect(commahandler(['Bob', '\"Charlie, Dianne\"'])).toMatchObject(['Bob', 'Charlie, Dianne'])
+})

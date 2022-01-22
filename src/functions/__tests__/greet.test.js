@@ -27,3 +27,7 @@ test("greet(['Amy', 'BRIAN', 'Charlotte']) produces 'Hello, Amy and Charlotte. A
 test("greet(['Bob', 'Charlie, Dianne']) produces 'Hello, Bob, Charlie, and Dianne.'", () => {
     expect(greet(['Bob', 'Charlie, Dianne'])).toBe('Hello, Bob, Charlie, and Dianne.')
 })
+
+test("greet(['Bob', '\"Charlie, Dianne\"']) produces 'Hello, Bob and Charlie, Dianne.'", () => {
+    expect(greet(['Bob', '\"Charlie, Dianne\"'])).toBe('Hello, Bob and Charlie, Dianne.')
+})
