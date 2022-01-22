@@ -11,3 +11,7 @@ test("greet(null) produces 'Hello, my friend.'", () => {
 test("greet('BOB')) produces 'HELLO BOB!'", () => {
     expect(greet('BOB')).toBe('HELLO BOB!')
 })
+
+test("greet(['Jill', 'Jane']) produces 'Hello, Jill and Jane.'", () => {
+    expect(greet(['Jill', 'Jane'])).toBe('Hello, Jill and Jane.')
+})
