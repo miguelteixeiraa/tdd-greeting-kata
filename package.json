@@ -1,0 +1,17 @@
+{  
+  "scripts": {
+    "start": "node './src/server.js'",
+    "dev": "yarn nodemon './src/server.js'",
+    "test": "yarn jest",
+    "fix-standard": "yarn standard --fix"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "standard": "^16.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
