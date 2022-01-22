@@ -20,11 +20,14 @@ const singleGreet = (name) => {
 
 const multiGreet = (names) => {
   result = 'Hello, '
+  normEnd = names.length > 2 ? "and " : ""
+  norm = names.length > 2 ? ", " : " and "
+
   for (let i = 0; i < names.length; i++) {
     if (i === names.length - 1) {
-      result += `${names[i]}.`
+      result += `${normEnd}${names[i]}.`
     } else {
-      result += `${names[i]} and `
+      result += `${names[i]}${norm}`
     }
   }
 
