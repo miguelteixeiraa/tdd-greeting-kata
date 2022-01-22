@@ -19,3 +19,11 @@ test("greet(['Jill', 'Jane']) produces 'Hello, Jill and Jane.'", () => {
 test("greet(['Amy', 'Brian', 'Charlotte']) produces 'Hello, Amy, Brian, and Charlotte.'", () => {
     expect(greet(['Amy', 'Brian', 'Charlotte'])).toBe('Hello, Amy, Brian, and Charlotte.')
 })
+
+test("greet(['Amy', 'BRIAN', 'Charlotte']) produces 'Hello, Amy and Charlotte. AND HELLO BRIAN!'", () => {
+    expect(greet(['Amy', 'BRIAN', 'Charlotte'])).toBe('Hello, Amy and Charlotte. AND HELLO BRIAN!')
+})
+
+test("greet(['Bob', 'Charlie, Dianne']) produces 'Hello, Bob, Charlie, and Dianne.'", () => {
+    expect(greet(['Bob', 'Charlie, Dianne'])).toBe('Hello, Bob, Charlie, and Dianne.')
+})
